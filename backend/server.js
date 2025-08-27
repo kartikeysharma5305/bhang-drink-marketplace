@@ -67,7 +67,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
   // Handle React routing - return all non-API requests to React app
-  app.get("*", (req, res) => {
+  // FIXED: Express v5 requires named wildcards - changed from "*" to "/{*splat}"
+  app.get("/{*splat}", (req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
   });
 }
