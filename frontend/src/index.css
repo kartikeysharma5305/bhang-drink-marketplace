@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@keyframes infinite-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-slide {
+  animation: infinite-slide 20s linear infinite reverse;
+}
