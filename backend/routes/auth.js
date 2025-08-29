@@ -11,6 +11,7 @@ import {
 const router = express.Router();
 
 // Register user
+// hello
 router.post(
   "/register",
   validateSignup,
